@@ -23,12 +23,12 @@ function loadPost(userId) {
         fetch(`https://jsonplaceholder.typicode.com/users/${userId}/posts`)
         .then(response => response.json())
         .then(data => {
-            // let dataId = 1;
+           
             data.forEach(element => {
 
                 let row = document.querySelector('.row');
                 let colDiv = document.createElement('div');
-                colDiv.className = 'col-md-4 mb-3';
+                colDiv.className = 'col-md-4 ';
                 row.appendChild(colDiv);
 
                 let card = document.createElement('div');
@@ -67,7 +67,7 @@ function loadPost(userId) {
                 bookMarkIcon.style.cursor = 'pointer';
                 cardBody.appendChild(bookMarkIcon);
 
-                // dataId++;
+        
 
                 bookMarkIcon.addEventListener('click',function(){
                     console.log(element);
